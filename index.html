@@ -1,21 +1,43 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="jogodavelha.css" type="text/css"> 
-  </head>
-  <body>
-    <h1>Jogo da Velha</h1>
-    <div id="board">
-     <div class="casinha"></div>
-      <div class="casinha black"></div>
-      <div class="casinha"></div>
-      <div class="casinha black"></div>
-      <div class="casinha"></div>
-      <div class="casinha black"></div>
-      <div class="casinha"></div>
-      <div class="casinha black"></div>
-      <div class="casinha"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="jogodavelha.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+        <div class="player-names">
+            <input type="text" id="player1-name" placeholder="Nome do Jogador 1">
+            <input type="text" id="player2-name" placeholder="Nome do Jogador 2">
+        </div>
+        <div class="game-wrapper">
+            <div class="game-board">
+                <div id="board">
+                    <div class="casinha"></div>
+                    <div class="casinha gray"></div>
+                    <div class="casinha"></div>
+                    <div class="casinha gray"></div>
+                    <div class="casinha"></div>
+                    <div class="casinha gray"></div>
+                    <div class="casinha"></div>
+                    <div class="casinha gray"></div>
+                    <div class="casinha"></div>
+                </div>
+                <div id="vencedor">
+                    <img src="winner.png" alt="Winner" id="winner-img">
+                    <span id="winner-text"></span>
+                </div>
+            </div>
+            <div id="last-winner">Último ganhador: Nenhum</div>
+            <div id="winners-list">
+                <h2>Últimos ganhadores:</h2>
+                <ul id="winners"></ul>
+            </div>
+        </div>
     </div>
-    <div id="vencedor"></div>
     <script type="text/javascript" src="jogodavelha.js"></script>
-  </body>
+</body>
 </html>
